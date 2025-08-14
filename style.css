@@ -1,51 +1,154 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kelas 12 B2 - Bersama Meraih Impian</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1 class="animate-text">Kelas 12 B2</h1>
-            <p class="animate-text">Satu langkah menuju masa depan yang gemilang.</p>
-        </header>
+/* Import font dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
 
-        <section class="hero">
-            <div class="hero-content">
-                <img src="https://via.placeholder.com/600x400.png?text=Foto+Kelas+12+B2" alt="Foto Kelas 12 B2" class="class-photo animate-fade-in">
-                <div class="text-content animate-slide-in">
-                    <h2>Kebersamaan adalah Kunci</h2>
-                    <p>Di kelas ini, kami bukan hanya belajar, tetapi juga tumbuh bersama. Setiap hari adalah petualangan baru menuju kesuksesan.</p>
-                </div>
-            </div>
-        </section>
+/* Gaya dasar */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e0f2f1, #b2dfdb); /* Gradien hijau mint */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+}
 
-        <section class="vision-mission">
-            <div class="card animate-fade-in">
-                <h3>Visi Kami</h3>
-                <p>Menjadi generasi muda yang unggul dalam akademik, berkarakter mulia, dan siap menghadapi tantangan global.</p>
-            </div>
-            <div class="card animate-fade-in">
-                <h3>Misi Kami</h3>
-                <ul>
-                    <li>Meningkatkan prestasi akademik melalui kolaborasi dan inovasi.</li>
-                    <li>Mengembangkan potensi diri dan minat setiap siswa.</li>
-                    <li>Menciptakan lingkungan belajar yang harmonis dan suportif.</li>
-                </ul>
-            </div>
-        </section>
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
 
-        <section class="motivation">
-            <div class="motivation-quote animate-zoom-in">
-                <p>"Masa depan adalah milik mereka yang percaya pada keindahan impian mereka."</p>
-                <span>- Eleanor Roosevelt</span>
-            </div>
-        </section>
-    </div>
+/* Header */
+header {
+    text-align: center;
+    padding: 3rem 0;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    color: #00796b;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #555;
+    font-style: italic;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.class-photo {
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.text-content {
+    width: 40%;
+}
+
+.text-content h2 {
+    font-size: 2.5rem;
+    color: #004d40;
+}
+
+/* Visi & Misi */
+.vision-mission {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    flex: 1;
+}
+
+.card h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #00796b;
+    font-size: 1.5rem;
+}
+
+.card ul {
+    list-style-type: '✓ ';
+    padding-left: 1.5rem;
+}
+
+/* Motivasi */
+.motivation {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.motivation-quote {
+    background: #004d40;
+    color: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.motivation-quote p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem 0;
+    font-style: italic;
+}
+
+.motivation-quote span {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.animate-text {
+    animation: fadeIn 1.5s ease-out;
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0;
+}
+
+.animate-slide-in {
+    animation: slideIn 1s ease-out forwards;
+    opacity: 0;
+}
+
+.animate-zoom-in {
+    animation: zoomIn 1s ease-out forwards;
+    opacity: 0;
+}
